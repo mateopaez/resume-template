@@ -1,0 +1,227 @@
+% Based (but completely redesigned) on Resume in Latex Template by Sourabh Bajaj
+% Recommended to user Overleaf as an online Tex editor, easily converts to PDF
+
+\documentclass[letterpaper, 10pt]{article}
+
+% font
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{noto}
+% \usepackage[default]{raleway}
+
+\pdfgentounicode=1
+
+% packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{pagecolor}
+\usepackage{ragged2e}
+
+\usepackage[left=1cm,right=1cm,top=1.25cm,bottom=1.25cm]{geometry}
+
+% custom
+
+% command macros
+\newcommand{\iconSpace}{\hspace{2px}}
+\newcommand{\bulletSpace}{\vspace{-4pt}}
+\newcommand{\hSpace}{\hspace{8px}}
+\newcommand{\secStartSpace}{\vspace{3pt}}
+\newcommand{\secEndSpace}{\vspace{5pt}}
+\newcommand{\spaceCollapse}{\vspace{-2pt}}
+
+% use the macro for work experience header
+% arg 1 = header title
+% arg 2 = position title (subtitle (in italics)
+% arg 3 = date
+\newcommand{\workHeader}[3]{
+\noindent \large{\textbf{\textcolor{TextColor}{#1}}} \hfill \normalsize{#3}\vspace{2pt}\\
+	\textit{#2}\vspace{-2pt}
+}
+
+% use the macro for work experience subheader
+\newcommand{\workSubHeader}[2]{
+    \noindent \textit{#1} \hfill \normalsize{#2}
+	\vspace{-2pt}
+}
+
+% use the macro for project header
+\newcommand{\projectHeader}[3]{
+\noindent\href{#2}{\large\textbf{#1}} \hfill \normalsize#3 \vspace{2pt}
+}
+
+% line spacing
+
+% colors
+% \definecolor{blue}{RGB}{14, 100, 237} % change the blue color if this one is not to your liking
+
+
+\definecolor{PageColor}{HTML}{1b2333}
+\definecolor{TextColor}{HTML}{c8d9da}
+\definecolor{HeaderColor}{HTML}{eff7f8}
+\definecolor{blue}{HTML}{eff7f8}
+\definecolor{white}{HTML}{f0fafb}
+
+\pagecolor{PageColor}
+\color{TextColor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=HeaderColor,
+    filecolor=HeaderColor,
+    urlcolor=TextColor,
+}
+
+% indent space
+\titlespacing{\section}{0pt}{1px}{2ex}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{-2pt}\raggedright\Large
+}{}{0em}{}[\color{white}\titlerule \vspace{-5pt}]
+
+% bolder
+\newcommand{\boldlarger}[1]{{\large\textbf{\color{white}{#1}}}}
+% \newcommand{\boldlarger}[1]{{\textbf{\color{white}{#1}}}}
+\newcommand{\justlarge}[1]{{\large \textbf{#1}}}
+
+\begin{document}
+
+% ------------- header ------------- %
+\begin{center} 
+	{\Huge \textbf{Mateo Paez}}\\
+	\vspace{1px}
+ \color{TextColor}
+	% "footnotes" (icon + link)
+	{
+		\color{white}
+            \faicon{linkedin} \iconSpace \href{https://www.linkedin.com/in/mateopaez/}{MateoPaez}
+		\hfill
+		\href{mailto:mattypaez@yahoo.ca}{mattypaez@yahoo.ca} \vspace{2pt} \iconSpace \faicon{envelope} 
+        }\\
+	{
+            \color{white}
+		\faicon{github} \iconSpace \href{https://github.com/mateopaez}{MateoPaez}
+            \hfill
+		\href{https://mateopaez.site/}{mateopaez.site} \iconSpace \faicon{globe} 
+		% \hSpace 
+		% \faicon{map-marker} \iconSpace
+		% Regina, SK
+	}
+\end{center}
+\spaceCollapse
+\spaceCollapse
+% ------------- end header ------------- %
+
+% ------------- education ------------- %
+\section{\color{blue} \textbf{Education}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\large\textbf{University of Alberta}\hfill \normalsize{Sept 2019 - Dec 2024} \\
+	\setlength\parindent{1cm} B.Sc. Computing Science with Specialization
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end education ------------- %
+
+
+
+% ------------- work experience ------------- %
+\section{\color{blue} \textbf{Work Experience}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\workHeader{Code Ninjas}{Code Sensei}{May 2022 - May 2024}
+	\begin{itemize}
+		\item Taught children and teenagers fundamental programming practices via a programming curriculum which utilizes JavaScript, Lua, C\#, Makecode Arcade, and Unity.
+		      \bulletSpace
+        \item Ran daily and weekly STEM camps during the summer months specializing in Lua and how to create complex environments in Roblox Studio.
+			  \bulletspace
+		\item Offered exceptional customer service to inquiring families while promoting the company brand and educating parents on the company's mission and values.
+	\end{itemize}
+		
+	\workHeader{Freedom Mobile}{Key Holder - Sales Specialist}{Feb 2019 - May 2022}
+	\begin{itemize}
+		\item Responsible for meeting sales goals by selling the company's products and services to new and existing customers.
+		      \bulletSpace
+		\item Performed administrative tasks such as replenishment of product, inventory, answering multiple phone lines, filing paperwork, and maintaining a clean work environment.
+			  \bulletSpace
+		\item Educated customers on all plans and electronics, and assisted their decision to purchase the best package based on individual needs.
+	\end{itemize}
+\end{addmargin}
+\secEndSpace
+% ------------- end experience ------------- %
+
+
+
+% ------------- projects ------------- %
+\section{\color{blue} \textbf{Projects}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+
+		
+	% ------------- project 1 ------------- %
+	\projectHeader{Gobber's Hoard}{https://bathrobe-studios.github.io}{Sept 2021 - Dec 2021}
+
+	\noindent A looter/stealth video game developed in RPG Maker MV, built using JavaScript.
+	\spaceCollapse
+	\begin{itemize}
+		\item Member of a 5-person team where my primary roles were level design and building, implementing mechanics using custom made plugins, and general quality assurance and bug testing.
+	\end{itemize}
+	% ------------- end project 1 ------------- %
+ 
+	% ------------- project 2 ------------- %
+	\projectHeader{Social Distribution}{https://github.com/CMPUT404-Fall22-Project/Group-Project}{Sept 2022 - Dec 2022}
+		
+	\noindent A Blogging/Social Network platform where users can share posts and interact with their friends.
+	\spaceCollapse
+	\begin{itemize}
+		\item \textbf{Technology/Tools:} React, JavaScript, CSS, HTML, Python, Django
+		      \bulletSpace
+		\item Member of a 5-person team where my primary roles were Front-End design and development, while also helping out with Back-End HTTP connection handling.
+	\end{itemize}
+	% ------------- end project 2 ------------- %
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end projects ------------- %
+
+
+
+% ------------- skills ------------- %
+\section{\color{blue} \textbf{Skills}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\setstretch{1.125}
+	\noindent \textbf{Languages:} Python, JavaScript/TypeScript, C\#, Java, Lua, SQL, MongoDB, CSS, HTML \\
+	\noindent \textbf{Technology:} Firebase, Postgres, Git, Docker, Unity, Figma \\
+	\noindent \textbf{Libraries:} React, Django, Flask, NodeJS, Tailwind, Pytest, Espresso, Junit
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end skills ------------- %
+
+% ------------- volunteer ------------- %
+\section{\color{blue} \textbf{Volunteer}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\workHeader{University of Alberta}{President: Super Smash Bros. Club}{June 2021 - December 2024}
+	\begin{itemize}
+        \item Was the main communication between the University and the local community for many events.
+        \item Lead safe and fun recreational Esports events for people of all ages at various venues.
+        \item Obtained organizational skills through event, resource, and financial management
+    \end{itemize}
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- volunteer ------------- %
+
+\end{document}
